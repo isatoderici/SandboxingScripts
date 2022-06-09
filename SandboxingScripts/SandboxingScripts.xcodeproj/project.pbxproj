@@ -20,7 +20,6 @@
 		74139BF8285012E2005B49D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74139BFB285012E2005B49D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74139BFD285012E2005B49D6 /* SandboxingScripts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SandboxingScripts.entitlements; sourceTree = "<group>"; };
-		74139C042850224A005B49D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +52,6 @@
 		74139BF3285012E0005B49D6 /* SandboxingScripts */ = {
 			isa = PBXGroup;
 			children = (
-				74139C042850224A005B49D6 /* Info.plist */,
 				74139BF4285012E0005B49D6 /* SandboxingScriptsApp.swift */,
 				74139BF6285012E0005B49D6 /* ContentView.swift */,
 				74139BF8285012E2005B49D6 /* Assets.xcassets */,
@@ -146,17 +144,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/AwesomeAssets.xcassets",
+				"$(SRCROOT)/last_file.json",
 			);
 			name = "Copy Awesome Assets to Build Output";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/AwesomeAssets.xcassets",
+				"$(DERIVED_FILE_DIR)/first_file.json",
+				"$(DERIVED_FILE_DIR)/last_file.json",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export ENABLE_USER_SCRIPT_SANDBOXING\\=YES\ncp -Rf ${SRCROOT}/AwesomeAssets.xcassets ${DERIVED_FILE_DIR}\n";
+			shellScript = "cp -f ${SRCROOT}/first_file.json ${DERIVED_FILE_DIR}\ncp -f ${SRCROOT}/last_file.json ${DERIVED_FILE_DIR}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -300,7 +299,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SandboxingScripts/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,7 +327,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SandboxingScripts/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
