@@ -138,6 +138,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		74139C03285013B8005B49D6 /* Copy Awesome Assets to Build Output */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -145,6 +146,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/last_file.json",
+				"$(SRCROOT)/first_file.json",
 			);
 			name = "Copy Awesome Assets to Build Output";
 			outputFileListPaths = (
@@ -155,7 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f ${SRCROOT}/first_file.json ${DERIVED_FILE_DIR}\ncp -f ${SRCROOT}/last_file.json ${DERIVED_FILE_DIR}\n";
+			shellScript = "cp -f ${SRCROOT}/first_file.json ${DERIVED_FILE_DIR}\ncp -f ${SRCROOT}/last_file.json ${DERIVED_FILE_DIR}\ncp -f /Users/isabelatoderici/Desktop/external_file.json /Users/isabelatoderici/Documents/external_file.json\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
