@@ -138,7 +138,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		74139C03285013B8005B49D6 /* Copy Awesome Assets to Build Output */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
